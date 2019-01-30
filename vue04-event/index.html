@@ -12,8 +12,11 @@
         <div id="app">
             <button v-on:click="showAlert('zeki')">Alert Göster</button>
             <button v-on:click="increaseCounter(4,$event)">Step</button>
+            <button v-on:click="counter+=2">2 Arttır.</button>
             <button v-on:click="counter++">Arttır</button>
+            <p>{{counter>= 10 ? "Counter 10 dan büyüktür.":"Counter 10 dan küçüktür."}}</p>
             <p>{{counter}}</p>
+            <p>{{counter * 10/2}}</p>
             <p v-on:mousemove="updateCoords(2,$event)">Koordinatlar {{x}},{{y}}
                 <span v-on:mousemove.stop>GİZLİ BÖLME</span>
             </p>
