@@ -14,7 +14,7 @@
 
 # Directive
 
-__v-on__
+__v-on__ : Eventi yakalamak için kullanılan directive
 
 __v-bind__
 
@@ -22,3 +22,11 @@ __v-once__ : İlk renderdan sonra html içerisinde nasıl kalmasını istiyorsak
 
 __v-html__ : HTML içeriğinin body tagları arasında bastırılmasını sağlar.
 
+# Event Modifiers - [Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
+
+- .stop
+- .prevent
+- .capture
+- .self
+- .once
+- .passive

@@ -17,6 +17,7 @@
             <p v-on:mousemove="updateCoords(2,$event)">Koordinatlar {{x}},{{y}}
                 <span v-on:mousemove.stop>GİZLİ BÖLME</span>
             </p>
+            <input type="text" v-on:keyup.enter.space="showAlert2">
         </div>
         <script>
             new Vue({
@@ -37,6 +38,9 @@
                         this.counter += step;
                         this.x = event.clientX;
                         this.y = event.clientY;
+                    },
+                    showAlert2: function(event) {
+                        alert(event.target.value);
                     }
                 },
             });
