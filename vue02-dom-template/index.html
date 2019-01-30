@@ -10,15 +10,22 @@
 	</head>
 	<body>
 		<div id="app">
-			<p>{{title}}</p>
-        </div>
-        
+			<p>{{hello()}} <a v-bind:href="link">Link</a></p>
+		</div>
+
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					title: 'Merhaba Vue.js',
-                },
+					title: 'Merhaba, ',
+					message : 'Kullanıcı hoşgeldiniz!...',
+					link: 'http://www.google.com'
+				},
+				methods : {
+					hello: function() {
+						return this.title + this.message;
+					}
+				}
 			});
 		</script>
 
