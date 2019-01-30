@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <div id="exercise">
+            <!-- 1) Butona tıkladığında bir alert kutusu çıkartınız. -->
+            <div>
+                <button v-on:click="showAlert()">Alert Göster</button>
+            </div>
+            <!-- 2) "keydown" event'ini dinleyerek value değişkeni içerisinde yazdığınız veriyi saklayın. (ipucu: event.target.value size yazdığınız veriyi verebilir.) -->
+            <div>
+                <input type="text" v-on:keydown="changeInput">
+                <p>{{value}}</p>
+            </div>
+            <!-- 3) 2. uygulamayı düzenleyerek eğer keydown ENTER ise yazdığınız verinin value değerine aktarılmasını sağlayınız. -->
+            <div>
+                <input type="text" v-on:keydown.enter="changeInput">
+                <p>{{value}}</p>
+            </div>
+        </div>
+        <script>
+            new Vue({
+                el: '#exercise',
+                data: {
+                    value: ''
+                },
+                methods: {
+                    showAlert: function() {
+                        alert();
+                    },
+                    changeInput: function(event) {
+                        this.value = event.target.value;
+                    }
+                },
+            });
+        </script>
+
+    </body>
+</html>
