@@ -10,24 +10,15 @@
 	</head>
 	<body>
 		<div id="app">
-            <h1>{{title}}</h1>
-            <hr>
-            <input type="text" v-on:input="changeTitle">
-			<p>{{description}}</p>
+			<p>{{title}}</p>
         </div>
         
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					title: 'Merhaba. | Vue.js',
-					description: 'Bu bir açıklamadır.'
+					title: 'Merhaba Vue.js',
                 },
-                methods: {
-                    changeTitle: function(event) {
-                        this.description = event.target.value;
-                    }
-                }
 			});
 		</script>
 
