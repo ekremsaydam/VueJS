@@ -10,20 +10,24 @@
 	</head>
 	<body>
 		<div id="app">
+			<p v-once>{{title}}</p>
 			<p>{{hello()}} <a v-bind:href="link">Link</a></p>
+			<p v-html="blogLink"></p>
 		</div>
 
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					title: 'Merhaba, ',
-					message : 'Kullanıcı hoşgeldiniz!...',
-					link: 'http://www.google.com'
+					title: 'Merhaba, dünya ',
+					message: 'Kullanıcı hoşgeldiniz!...',
+					link: 'http://www.google.com',
+					blogLink: "<a href='http://vuejs.org'>Link</a>"
 				},
-				methods : {
+				methods: {
 					hello: function() {
-						return this.title + this.message;
+						this.title = 'Merhaba!!!';
+						return this.title
 					}
 				}
 			});
