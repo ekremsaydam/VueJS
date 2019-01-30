@@ -14,7 +14,9 @@
             <button v-on:click="increaseCounter(4,$event)">Step</button>
             <button v-on:click="counter++">Arttır</button>
             <p>{{counter}}</p>
-            <p v-on:mousemove="updateCoords(2,$event)">Koordinatlar {{x}},{{y}}</p>
+            <p v-on:mousemove="updateCoords(2,$event)">Koordinatlar {{x}},{{y}}
+                <span v-on:mousemove.stop>GİZLİ BÖLME</span>
+            </p>
         </div>
         <script>
             new Vue({
