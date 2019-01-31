@@ -22,6 +22,8 @@ __v-once__ : İlk renderdan sonra html içerisinde nasıl kalmasını istiyorsak
 
 __v-html__ : HTML içeriğinin body tagları arasında bastırılmasını sağlar.
 
+__v-model__ : Two way binding
+
 # Event Modifiers - [Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
 
 - .stop

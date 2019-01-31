@@ -28,10 +28,38 @@
              -->
 
             <div>
-                <input type="text">
+                <!-- <input type="text" v-on:keyup.enter="changeTime"> -->
+                <input type="text" v-model="timeOut">
                 <p>{{value}}</p>
             </div>
         </div>
+        <script>
+            new Vue({
+                el: '#exercise',
+                data: {
+                    value: 0,
+                    timeOut: 5000
+                },
+                //methods: {
+                //    changeTime: function(event) {
+                //        this.timeOut = Number(event.target.value);
+                //    }
+                //},
+                computed: {
+                    result: function() {
+                        return this.value != 33 ? "Henüz Bitmedi!" : "Tamamlandı";
+                    }
+                },
+                watch: {
+                    result: function(value) {
+                        th = this;
+                        setTimeout(function() {
+                            th.value = 0;
+                        }, this.timeOut)
+                    }
+                },
+            });
+        </script>
 
     </body>
 </html>
