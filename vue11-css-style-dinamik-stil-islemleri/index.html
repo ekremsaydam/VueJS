@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: gray;
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="app">
+            <div class="box" :style="{'backgroundColor':color}"></div>
+            <!-- <div class="box" :style="{'background-color':color}"></div> -->
+            <div class="box" :style="customStyle"></div>
+            <div class="box" :style="[customStyle,{width:yukseklik+'px'}]"></div>
+            <hr>
+            <input type="text" v-model="color">
+            <input type="text" v-model="yukseklik">
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    color: "green",
+                    height: 100,
+                    yukseklik: 100
+                },
+                computed: {
+                    customStyle: function() {
+                        return {
+                            backgroundColor: this.color,
+                            height: this.yukseklik + "px"
+                        }
+                    }
+                },
+            });
+        </script>
+
+    </body>
+</html>
