@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <div id="exercise">
+            <!-- 
+            1) value isimli property'nin değerine bakarak result için bir reactive kod yazınız. 
+
+            Süreç ise value 33'e eşit olmadığı durumlarda <p> elementlerinin içine "Henüz Bitmedi!!" 33 olduğunda ise "Tamamlandı" yazmalıdır.
+
+            Bunun için gördüğünüz reactivity türlerinden birini kullanırız. (Not: Butonlar yardımıyla value property'nin değerini değiştirebilirsiniz.))
+        -->
+            <div>
+                <p>Şuanki Değeri : {{value}}</p>
+                <button @click="value+=5">Add 5</button>
+                <button @click="value+=1">Add 1</button>
+                <p>{{result}}</p>
+            </div>
+            <!-- 
+                2) result property' değerini izleyerek 5 saniye sonra value'nun değerini sıfırlayınız. (ipucu: setTimeout(..., 5000) kullanılabilir.)
+             -->
+
+            <div>
+                <input type="text">
+                <p>{{value}}</p>
+            </div>
+        </div>
+
+    </body>
+</html>

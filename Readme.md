@@ -14,9 +14,9 @@
 
 # Directive
 
-__v-on__ : Eventi yakalamak için kullanılan directive
+__v-on__ : Eventi yakalamak için kullanılan directive. Kısaltma @
 
-__v-bind__
+__v-bind__ : kısaltması :
 
 __v-once__ : İlk renderdan sonra html içerisinde nasıl kalmasını istiyorsak öyle gösterilmesi.
 
