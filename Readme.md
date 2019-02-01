@@ -44,3 +44,7 @@ Resmi Döküman - Events: http://vuejs.org/guide/events.html
 Resmi Döküman - Computed Properties & Watchers: http://vuejs.org/guide/computed.html
 
 Resmi Döküman - Class ve Style Binding: http://vuejs.org/guide/class-and-style.html
+
+# v-if ile v-show
+v-if : dom üzerinden kaldırılmasını yada eklenmesini istiyorsanız kullanılır.
+v-show : Uygulamada dom üzerinde dom üzerinde pasif olarak durmasını istiyorsanız kullanılır.
