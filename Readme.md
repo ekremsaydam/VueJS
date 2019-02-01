@@ -32,3 +32,15 @@ __v-model__ : Two way binding
 - .self
 - .once
 - .passive
+
+# Daha Fazla Link:
+
+Resmi Döküman - Başlangıç: http://vuejs.org/guide/
+
+Resmi Döküman - Template Syntax: http://vuejs.org/guide/syntax.html
+
+Resmi Döküman - Events: http://vuejs.org/guide/events.html
+
+Resmi Döküman - Computed Properties & Watchers: http://vuejs.org/guide/computed.html
+
+Resmi Döküman - Class ve Style Binding: http://vuejs.org/guide/class-and-style.html
