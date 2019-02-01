@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <style>
+
+        </style>
+
+    </head>
+    <body>
+        <div id="exercise">
+            <!-- 
+                1) Efekti butona basarak başlatın. Efekt "highlight" ve/veya  "shrink" class'ları arasında değişmelidir. Bu değişim her bir interval döngüsünde olabilir. ('efect' id'li div'e o anki aktif olan class eklenecektir. )
+            -->
+            <div>
+                <button @click="startEfect">Efekti Başlat</button>
+                <div id="effect"></div>
+            </div>
+            <!-- 
+                2) Birkaç tane CSS Class'ı ğreterek bu Class'ları Array Syntax'ı ile aşağıdaki <div>'e ekleyiniz.'
+             -->
+             <div>Henüz bir class'ım yok.</div>
+             <!-- 
+                 3) Örnek birkaç tane class üreterek (ya da ürettiklerinizi kullanarak) <input> içerisine class adı girerek hemen altındaki <div> elementine bu yazılan Class'ı eklemeyi yapınız.
+              -->
+              <div>
+                  <input type="text">
+                  <div></div>
+              </div>
+              <!-- 
+                  4) Kullanıcının Class isimlerini girebileceği iki adet <input> elementimiz var. Bunları kullanarak hemen altındaki <div> elementinin Class'larını attached etmesini sağlayınız.
+               -->
+
+               <div>
+                   <input type="text">
+                   <input type="text">
+               </div>
+               <!-- 
+                   5) 3. Uygulamayı tekrarlayın. Fakat bu sefer Class Adı yerine denk gelecek style kodlarını ekleyiniz.
+                -->
+                <div>
+                    <input type="text">
+                    <div></div>
+                </div>
+                <!-- 
+                    6) setInterval ve Style Binding kullanarak Basit bir progress bar üretin. Progress bar'ın çalışmasını buton'a basarak başlatın.
+                 -->
+                 <div>
+                     <button v-on:click="startProgress">Progress İşlemini Başlat!</button>
+                     <div></div>
+                 </div>
+        </div>
+        <script>
+            new Vue({
+                el: '#exercise',
+            });
+        </script>
+
+    </body>
+</html>
