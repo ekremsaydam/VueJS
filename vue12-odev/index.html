@@ -7,7 +7,32 @@
         <title>Document</title>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <style>
+            #effect {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
 
+            .highlight {
+                background-color: red;
+                width: 200px !important;
+            }
+
+            .shrink {
+                background-color: gray;
+                width: 200px !important;
+            }
+
+            #myProgress {
+                width: 100%;
+                background-color: grey;
+            }
+
+            #myBar {
+                width: 1%;
+                height: 30px;
+                background-color: green;
+            }
         </style>
 
     </head>
@@ -17,46 +42,89 @@
                 1) Efekti butona basarak başlatın. Efekt "highlight" ve/veya  "shrink" class'ları arasında değişmelidir. Bu değişim her bir interval döngüsünde olabilir. ('efect' id'li div'e o anki aktif olan class eklenecektir. )
             -->
             <div>
-                <button @click="startEfect">Efekti Başlat</button>
-                <div id="effect"></div>
+                <button @click="startEfect()">Efekti Başlat</button>
+                <div id="effect" :class="{highlight : classGecis, shrink:!classGecis}"></div>
             </div>
             <!-- 
                 2) Birkaç tane CSS Class'ı ğreterek bu Class'ları Array Syntax'ı ile aşağıdaki <div>'e ekleyiniz.'
              -->
-             <div>Henüz bir class'ım yok.</div>
-             <!-- 
+            <div :class="['height','shrink']">Henüz bir class'ım yok.</div>
+            <!-- 
                  3) Örnek birkaç tane class üreterek (ya da ürettiklerinizi kullanarak) <input> içerisine class adı girerek hemen altındaki <div> elementine bu yazılan Class'ı eklemeyi yapınız.
               -->
-              <div>
-                  <input type="text">
-                  <div></div>
-              </div>
-              <!-- 
+            <div>
+                <input type="text" v-model="inputClass">
+                <div :class="inputClass">{{inputClass}}</div>
+            </div>
+            <!-- 
                   4) Kullanıcının Class isimlerini girebileceği iki adet <input> elementimiz var. Bunları kullanarak hemen altındaki <div> elementinin Class'larını attached etmesini sağlayınız.
                -->
 
-               <div>
-                   <input type="text">
-                   <input type="text">
-               </div>
-               <!-- 
+            <div>
+                <input type="text" v-model="div1Class">
+                <input type="text" v-model="div2Class">
+                <div :class="[div1Class,div2Class]">{{div1Class}} {{div2Class}}</div>
+            </div>
+            <!-- 
                    5) 3. Uygulamayı tekrarlayın. Fakat bu sefer Class Adı yerine denk gelecek style kodlarını ekleyiniz.
                 -->
-                <div>
-                    <input type="text">
-                    <div></div>
-                </div>
-                <!-- 
+            <div>
+                <input type="text" v-model="div1Style">
+                <div :style="styleChange">{{div1Style}}</div>
+            </div>
+            <!-- 
                     6) setInterval ve Style Binding kullanarak Basit bir progress bar üretin. Progress bar'ın çalışmasını buton'a basarak başlatın.
                  -->
-                 <div>
-                     <button v-on:click="startProgress">Progress İşlemini Başlat!</button>
-                     <div></div>
-                 </div>
+            <div>
+                <button v-on:click="startProgress">Progress İşlemini Başlat!</button>
+                <div id="myProgress">
+                    <div id="myBar" :style="progressStyle"></div>
+                </div>
+            </div>
         </div>
         <script>
             new Vue({
                 el: '#exercise',
+                data: {
+                    classGecis: false,
+                    hightLightClass: 'highlight',
+                    inputClass: 'highlight',
+                    div1Class: '',
+                    div2Class: '',
+                    div1Style: '',
+                    proggressWidth: 1
+                },
+                methods: {
+                    startEfect: function() {
+                        vm = this;
+                        setInterval(function() {
+                            vm.classGecis = !vm.classGecis;
+                        }, 1000)
+                    },
+                    startProgress: function() {
+                        this.proggressWidth=1;
+                        vm=this;
+                        let p = setInterval(function() {
+                            if(vm.proggressWidth >=100) {
+                                clearInterval(p);
+                            } else {
+                                vm.proggressWidth++;
+                            }
+                        },10);
+                    },
+                },
+                computed: {
+                    styleChange: function() {
+                        return {
+                            backgroundColor: this.div1Style
+                        }
+                    },
+                    progressStyle: function() {
+                        return {
+                            width:this.proggressWidth+"%"
+                        }
+                    }
+                },
             });
         </script>
 
