@@ -12,6 +12,10 @@
 
 [Vue, React, Angular Hangisini Seçmeliyim?](http://vuejsegitim.com/vue-react-angular-hangisini-secmeliyim/)
 
+> `npm install -g vue-cli`
+>
+> ![VueJS Template](VueJS-CLI-Template.png)
+
 # Directive
 
 __v-on__ : Eventi yakalamak için kullanılan directive. Kısaltma @
