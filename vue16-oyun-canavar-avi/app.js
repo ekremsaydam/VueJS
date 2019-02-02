@@ -85,12 +85,12 @@ new Vue({
         player_progress: function() {
             return {
                 width: this.player_health + '%'
-            }
+            };
         },
         monster_progress: function() {
             return {
                 width: this.monster_health + '%'
-            }
+            };
         }
-    },
+    }
 });
