@@ -36,8 +36,13 @@ __v-model__ : Two way binding
 # v-if ile v-show - v-for
 
 v-if : dom üzerinden kaldırılmasını yada eklenmesini istiyorsanız kullanılır.
+
 v-show : Uygulamada dom üzerinde dom üzerinde pasif olarak durmasını istiyorsanız kullanılır.
+
 v-for : listeler içerisinde dönmek için
+
+# VueJS Life Cycle
+![Alt](VueJS-LifeCycle.png)
 
 # Daha Fazla Link:
 
