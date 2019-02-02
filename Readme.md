@@ -15,6 +15,10 @@
 > `npm install -g vue-cli`
 >
 > `npm install -g @vue/cli-init`
+
+> Eski kod ==> `vue init webpack-simple app-name`
+
+> `vue create app-name`
 >
 > ![VueJS Template](VueJS-CLI-Template.png)
 
