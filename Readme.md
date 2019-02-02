@@ -33,6 +33,12 @@ __v-model__ : Two way binding
 - .once
 - .passive
 
+# v-if ile v-show - v-for
+
+v-if : dom üzerinden kaldırılmasını yada eklenmesini istiyorsanız kullanılır.
+v-show : Uygulamada dom üzerinde dom üzerinde pasif olarak durmasını istiyorsanız kullanılır.
+v-for : listeler içerisinde dönmek için
+
 # Daha Fazla Link:
 
 Resmi Döküman - Başlangıç: http://vuejs.org/guide/
@@ -45,6 +51,8 @@ Resmi Döküman - Computed Properties & Watchers: http://vuejs.org/guide/compute
 
 Resmi Döküman - Class ve Style Binding: http://vuejs.org/guide/class-and-style.html
 
-# v-if ile v-show
-v-if : dom üzerinden kaldırılmasını yada eklenmesini istiyorsanız kullanılır.
-v-show : Uygulamada dom üzerinde dom üzerinde pasif olarak durmasını istiyorsanız kullanılır.
+Resmi Döküman - Koşullar: https://vuejs.org/v2/guide/conditional.html
+
+Resmi Döküman - Listeler: https://vuejs.org/v2/guide/list.html
+
+
