@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <div id="exercise">
+            <!-- 
+                1) Butona tıklayarak <p> elementleri arasında bir Toggle işlevi yapın. Hem v-if hem de v-show syntax'larını kullanarak bu işlemi gerçekleştiriniz. Aralarındaki farklı öğeyi incele diyerek bu iki syntax farkını gözlemleyiniz.
+             -->
+            <div>
+                <button @click="pShow = !pShow">Toggle</button>
+                <p v-if="pShow">Beni görebiliyor musun?</p>
+                <p v-else>Ya da beni görebiliyor musun?</p>
+                <p v-show="pShow">Beni görebiliyor musun?</p>
+                <p v-show="!pShow">Ya da beni görebiliyor musun?</p>
+            </div>
+            <!-- 
+                 2) Array kullanarak bir <ul> listesi oluşturunuz. Liste içerisinde hem Array'deki verinin değerini hem de index numarasını her bir elementin içerisine yazınız.
+              -->
+            <ul>
+                <li v-for="(product, index) in products" :key="index">{{product}} - {{index}}</li>
+            </ul>
+            <!-- 
+                3) Yan taraftaki objenin tüm value değerlerini yazınız: customObject: {title:'Game of Throns',author: 'George R.R',book: '7'}. Ayrıca tüm elementlerin index numarasını da yazdırınız.
+             -->
+            <ul>
+                <li v-for="(item,key,index in customObject"><strong>{{key}}</strong> - {{item}} - {{index}}</li>
+            </ul>
+            <!-- 
+                4) Yan taraftaki objenin tüm value değerlerini yazdırınız. Ayrıca iç içe bir loop daha kurarak Array içerisindeki verileri de yazdırınız. {name: 'NestedLoop', id: 19, data : [4.3, 2.67, 10.42, 1402]} (ipucu v-for ve v-if Directive'lerinin beraber kullanımı bunu başarmanızı sağlayacaktır.)
+             -->
+            <ul>
+                <li v-for="(value, key, index) in testData" :key="index">
+                    <template v-if="Array.isArray(value)">
+                        <ul>
+                            <li v-for="(item, index) in value" :key="index">{{item}}</li>
+                        </ul>
+                    </template>
+                    <template v-else>
+                        <li>{{value}}</li>
+                    </template>
+                </li>
+            </ul>
+        </div>
+        <script>
+            new Vue({
+                el: '#exercise',
+                data: {
+                    pShow: false,
+                    products: ["Monitör", "Klavye", "Askı", "Masa"],
+                    customObject: {
+                        title: 'Game of Throns',
+                        author: 'George R.R',
+                        book: '7'
+                    },
+                    testData: {
+                        name: 'NestedLoop',
+                        id: 10,
+                        data: [4.3, 2.67, 10.42, 1402]
+                    }
+                }
+            });
+        </script>
+
+    </body>
+</html>
