@@ -14,6 +14,8 @@
 
 > `npm install -g vue-cli`
 >
+> `npm install -g @vue/cli-init`
+>
 > ![VueJS Template](VueJS-CLI-Template.png)
 
 # Directive
