@@ -42,6 +42,7 @@ v-show : Uygulamada dom üzerinde dom üzerinde pasif olarak durmasını istiyor
 v-for : listeler içerisinde dönmek için
 
 # VueJS Life Cycle
+
 ![Alt](VueJS-LifeCycle.png)
 
 # Daha Fazla Link:
@@ -62,4 +63,4 @@ Resmi Döküman - Koşullar: https://vuejs.org/v2/guide/conditional.html
 
 Resmi Döküman - Listeler: https://vuejs.org/v2/guide/list.html
 
-
+Resmi Döküman - Vue Instance: https://vuejs.org/v2/guide/instance.html
