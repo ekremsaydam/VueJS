@@ -77,3 +77,15 @@ Resmi Döküman - Koşullar: https://vuejs.org/v2/guide/conditional.html
 Resmi Döküman - Listeler: https://vuejs.org/v2/guide/list.html
 
 Resmi Döküman - Vue Instance: https://vuejs.org/v2/guide/instance.html
+
+vue uzantılı dosyalar ile ilgili daha fazla bilgi almak için VueJS’ in resmî web sayfasına göz atabilirsiniz : http://vuejs.org/guide/single-file-components.html
+
+render() metodu ice ilgili data faze bilge almak icing VueJS’in resmî web sayfasına göz atabilirsiniz: http://vuejs.org/guide/render-function.html
+
+Kullanabileceğimiz 2 Farklı Developer Tools var;
+
+1) Chome Developer tools 
+
+2) Vue Developer Tools (https://github.com/vuejs/vue-devtools)
+
+CLI ile üretilmiş bir proje ile çalışırken (webpack), çalışan uygulamamızı Developer Tools kullanarak kolaylıkla debug edebiliriz.
