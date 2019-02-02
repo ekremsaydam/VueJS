@@ -15,6 +15,8 @@
 > `npm install -g vue-cli`
 >
 > `npm install -g @vue/cli-init`
+> 
+> `npm install -g @vue/cli-service-global`
 
 > Eski kod ==> `vue init webpack-simple app-name`
 
