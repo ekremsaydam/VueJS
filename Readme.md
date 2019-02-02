@@ -43,7 +43,8 @@ v-for : listeler içerisinde dönmek için
 
 # VueJS Life Cycle
 
-![Alt](VueJS-LifeCycle.png)
+![VueJS LifeCycle](VueJS-LifeCycle.png)
+![VueJS LifeCycle](VueJS-LifeCycle2.png)
 
 # Daha Fazla Link:
 
