@@ -43,6 +43,8 @@ v-for : listeler içerisinde dönmek için
 
 Resmi Döküman - Başlangıç: http://vuejs.org/guide/
 
+Resmi Döküman - API: https://vuejs.org/v2/api/
+
 Resmi Döküman - Template Syntax: http://vuejs.org/guide/syntax.html
 
 Resmi Döküman - Events: http://vuejs.org/guide/events.html
