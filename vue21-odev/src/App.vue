@@ -13,10 +13,10 @@
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
-import Header from "./Header";
-import Servers from "./Servers";
-import ServerStatus from "./ServerStatus";
-import Footer from "./Footer";
+import Header from "./components/Common/Header";
+import Servers from "./components/server/Servers";
+import ServerStatus from "./components/server/ServerStatus";
+import Footer from "./components/Common/Footer";
 
 export default {
   name: "app",
