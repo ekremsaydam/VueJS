@@ -1,21 +1,13 @@
 <template>
   <div>
-    <p>Lamba Durumu : {{ status }}</p>
-    <hr>
-    <button @click="lampOpen">Lambayı Aç</button>
+    <lamp-status v-for="lamp in 5"></lamp-status>
   </div>
 </template>
 <script>
-  export default {
-    data: function() {
-      return {
-        status:'Pasif'
-      }
-    },
-    methods: {
-      lampOpen: function() {
-        this.status = 'Açık'
-      }
-    }
+import LambStatus from "./LambStatus";
+export default {
+  components: {
+    "lamp-status": LambStatus
   }
+};
 </script>
