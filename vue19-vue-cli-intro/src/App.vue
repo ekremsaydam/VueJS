@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Sunucu Durumu : {{status}}</h1>
-    <lamb-component></lamb-component>
+    <lamp-component></lamp-component>
   </div>
 </template>
 

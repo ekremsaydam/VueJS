@@ -2,7 +2,7 @@
   <div>
     <p>Lamba Durumu : {{ status }}</p>
     <hr>
-    <button @click="lambOpen">Lambayı Aç</button>
+    <button @click="lampOpen">Lambayı Aç</button>
   </div>
 </template>
 <script>
@@ -13,7 +13,7 @@
       }
     },
     methods: {
-      lambOpen: function() {
+      lampOpen: function() {
         this.status = 'Açık'
       }
     }

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import Home from './Home';
-Vue.component('lamb-component', Home);
+Vue.component('lamp-component', Home);
 
 new Vue({
     el: '#app',
