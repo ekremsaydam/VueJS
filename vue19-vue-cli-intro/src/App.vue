@@ -1,10 +1,17 @@
 <template>
-  <h1>Merhaba Single File Template</h1>
+  <div>
+    <h1>Sunucu Durumu : {{status}}</h1>
+    <lamb-component></lamb-component>
+  </div>
 </template>
 
 <script>
 export default {
-
-}
+  data: function() {
+    return {
+      status: "Pasif"
+    };
+  }
+};
 </script>
 
