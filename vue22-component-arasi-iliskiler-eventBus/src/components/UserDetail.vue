@@ -9,30 +9,39 @@
   </div>
 </template>
 <script>
-  export default {
-    props: {
-      name: {
-        type: String,
-        // required: true,
-        default: 'Burası default değeri.'
-      },
-      age: [Number]
+import { eventBus } from "../main.js";
+export default {
+  props: {
+    name: {
+      type: String,
+      // required: true,
+      default: "Burası default değeri."
     },
-    methods: {
-      switchName() {
-        return this.name.split('').reverse().join('');
-      },
-      sendToParent: function() {
-        this.$emit('data','child componentten gelen.');
-      }
+    age: [Number]
+  },
+  methods: {
+    switchName() {
+      return this.name
+        .split("")
+        .reverse()
+        .join("");
+    },
+    sendToParent: function() {
+      this.$emit("data", "child componentten gelen.");
     }
+  },
+  created() {
+    eventBus.$on("ageWasEdited", age => {
+      this.age = age;
+    });
   }
+};
 </script>
 <style scoped>
-  div {
-    background-color: lightcoral;
-    padding: 20px;
-    border: 1px solid #666;
-    display: inline-block;
-  }
+div {
+  background-color: lightcoral;
+  padding: 20px;
+  border: 1px solid #666;
+  display: inline-block;
+}
 </style>
