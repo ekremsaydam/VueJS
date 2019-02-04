@@ -89,3 +89,7 @@ Kullanabileceğimiz 2 Farklı Developer Tools var;
 2) Vue Developer Tools (https://github.com/vuejs/vue-devtools)
 
 CLI ile üretilmiş bir proje ile çalışırken (webpack), çalışan uygulamamızı Developer Tools kullanarak kolaylıkla debug edebiliriz.
+
+VueJS Components konusunda daha fazla bilgi sahibi olmak istiyorsan, resmî web sayfasına bir göz atabilirsin. http://vuejs.org/guide/components.html
+
+Ayrıca buradaki konuya da bakmak faydalı olabilir: https://vuejs.org/v2/guide/components-registration.html
